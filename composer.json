@@ -1,6 +1,7 @@
 {
     "name": "keldorde/laravel-api-logger",
     "description": "Provides functions to send log messages to the System Message Manager API",
+    "license": "MIT",
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.0",
