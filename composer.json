@@ -1,0 +1,27 @@
+{
+    "name": "keldorde/laravel-api-logger",
+    "description": "Provides functions to send log messages to the System Message Manager API",
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^11.0",
+        "monolog/monolog": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "André Evertz",
+            "email": "andre.evertz@devil-coding.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "KeldorDE\\ApiLogger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KeldorDE\\ApiLogger\\ApiLoggerServiceProvider"
+            ]
+        }
+    }
+}
