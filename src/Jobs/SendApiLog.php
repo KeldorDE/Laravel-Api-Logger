@@ -43,14 +43,14 @@ class SendApiLog implements ShouldQueue
 
         try {
             Http::withHeaders([
-                'X-Api-Token' => $apiConfig['token'],
+                $apiConfig['token_header_name'] => $apiConfig['token'],
                 'User-Agent' => $apiConfig['user_agent'],
             ])
                 ->asForm()
                 ->post($apiConfig['endpoint'], [
-                    'subject' => $this->level,
-                    'message' => $this->message,
-                    'stacktrace' => $this->stackTrace,
+                    $apiConfig['post_field_names']['level'] => $this->level,
+                    $apiConfig['post_field_names']['message'] => $this->message,
+                    $apiConfig['post_field_names']['stacktrace'] => $this->stackTrace,
                 ]);
         } catch (ConnectionException) {
             //
