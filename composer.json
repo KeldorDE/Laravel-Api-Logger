@@ -3,7 +3,7 @@
     "description": "An API logger channel that can be used to send Log messages to an API endpoint.",
     "license": "MIT",
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "laravel/framework": "^11.0|^12.0",
         "monolog/monolog": "^3.0"
     },
